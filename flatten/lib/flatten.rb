@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'pp'
 
 def flatten(a)
   result = []
@@ -13,7 +12,3 @@ def flatten(a)
   result
 end
 
-
-test = [1,[2,3,4],5,[]]
-result = flatten(test)
-pp result

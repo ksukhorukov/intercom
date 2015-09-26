@@ -1,14 +1,12 @@
 #!/usr/bin/env ruby
 
 require 'json'
-require 'pp'
 
 def convert_to_radians(a)
   ( a * 3.14 ) / 180.0
 end
 
 def distance(lat1, long1, lat2, long2)
-  #puts "Distance calculation: #{lat1} #{long1} #{lat2} #{long2}"
 
   central_angle = Math.acos(Math.sin(lat1)*Math.sin(lat2) + Math.cos(lat1)*Math.cos(lat2) * Math.cos(long1 - long2))
   dst = central_angle * 6371.0  #radius of the earth
@@ -44,7 +42,6 @@ data.each_line do |client|
 end
 
 
-# p distance(52.986375,-6.043701, 53.3381985, -6.2592576)
 
 
 
